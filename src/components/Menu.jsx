@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Nav, Navbar } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 export const Menu = () => {
     return (
@@ -12,6 +13,11 @@ export const Menu = () => {
                         <Nav.Link href="/usuarios">Usuários</Nav.Link>
                         <Nav.Link href="/contato">Contato</Nav.Link>
                     </Nav>
+                    <Navbar.Collapse className="justify-content-end">
+                        <Link to={'/login'}>
+                            Sair
+                        </Link>
+                    </Navbar.Collapse>
                 </Container>
             </Navbar>
         </div>

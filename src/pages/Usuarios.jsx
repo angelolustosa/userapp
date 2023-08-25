@@ -5,10 +5,6 @@ import { Container } from 'react-bootstrap'
 
 export const Usuarios = () => {
     return (
-        <Container>
-            <Menu />
-            Usuarios
-            <Footer />
-        </Container>
+        <div>Usuarios</div>
     )
 }

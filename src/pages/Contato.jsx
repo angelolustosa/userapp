@@ -5,10 +5,6 @@ import { Container } from 'react-bootstrap'
 
 export const Contato = () => {
     return (
-        <Container>
-            <Menu />
-            Contato
-            <Footer />
-        </Container>
+        <div>Contato</div>
     )
 }

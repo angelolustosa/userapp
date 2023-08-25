@@ -10,8 +10,34 @@ import { Login } from './pages/Login.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Usuarios } from './pages/Usuarios.jsx';
 import { Contato } from './pages/Contato.jsx';
+import { Home } from './pages/Home.jsx';
 
-const router = createBrowserRouter([
+const router = createBrowserRouter([  
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        path: "/usuarios",
+        element: <Usuarios />,
+      },
+      {
+        path: "/contato",
+        element: <Contato />,
+      },
+      {
+        path: "/home",
+        element: <Home />,
+      },
+    ]
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+]);
+
+/* const router = createBrowserRouter([
   {
     path: "/",
     element: <Login />,
@@ -28,7 +54,7 @@ const router = createBrowserRouter([
     path: "/contato",
     element: <Contato />,
   },
-]);
+]); */
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

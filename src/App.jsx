@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Menu } from './components/Menu'
 import { Footer } from './components/Footer'
 import { Container } from 'react-bootstrap'
+import { Outlet } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,7 +11,7 @@ function App() {
     <>
       <Container>
         <Menu />
-        <>Bem-Vindo!</>
+        <Outlet />
         <Footer />
       </Container>
     </>
